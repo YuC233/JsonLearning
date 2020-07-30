@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.jsontest.bean.ShopBean;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    /**
+     * Gson TO Json
+     * @param view
+     */
+    public void playGsonToJson(View view) {
+        ShopBean bean = new Gson().fromJson(json, ShopBean.class);
+        Log.d(TAG,"==========>Gson" + bean.getShopName());
+
     }
 
     /**
@@ -89,7 +100,5 @@ public class MainActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-
     }
 }

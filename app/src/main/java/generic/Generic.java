@@ -11,8 +11,8 @@ public class Generic {
     }
 
     private void run() {
-        Node<Integer> nodeInt = new Node<Integer>();
-        nodeInt.setValue(10);
+        Node<Integer> nodeInt = new Node<Integer>();  //声明类型
+        nodeInt.setValue(10);//赋值
         System.out.println("-------INT值为：" + nodeInt.getValue());
         Node<Double> nodeDouble = new Node<Double>();
         nodeDouble.setValue(1212.12);
