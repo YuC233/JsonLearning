@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
 //多个对象放入数组
                 jsonArray.put(object);
             }
-            jsonObject.put("shop",jsonArray);
-            Log.d(TAG,"转换为Json---------->>" + jsonObject.toString());
+            jsonObject.put("shop", jsonArray);
+            Log.d(TAG, "转换为Json---------->>" + jsonObject.toString());
         } catch (JSONException e) {
             e.printStackTrace();
         }
